@@ -1,0 +1,278 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  color: var(--mainColor);
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-button:hover {
+  color: var(--mainColor);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.submit-button,
+.cancel-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-button {
+  background-color: var(--mainColor);
+  color: var(--textColor);
+}
+
+.cancel-button {
+  background-color: #ccc;
+  color: #333;
+}
+
+.submit-button:hover {
+  background-color: var(--mainColorLight);
+}
+
+.cancel-button:hover {
+  background-color: #bbb;
+}
+
+/* New styles for tasks section */
+.tasks-section {
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  margin-top: 20px;
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tasks-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-info span {
+  margin-bottom: 3px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.edit-task-button,
+.remove-task-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.edit-task-button {
+  color: #4a90e2;
+}
+
+.remove-task-button {
+  color: #ff6b6b;
+}
+
+.edit-task-button:hover {
+  background-color: rgba(74, 144, 226, 0.1);
+}
+
+.remove-task-button:hover {
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+.no-tasks-message {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.add-task-button {
+  background-color: var(--mainColor);
+  color: var(--textColor);
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.add-task-button:hover {
+  background-color: var(--mainColorLight);
+  transform: scale(1.02);
+}
+
+/* Inline task form styles */
+.inline-task-form {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.inline-task-form h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--mainColor);
+}
+
+.task-form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.save-task-button,
+.cancel-task-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.save-task-button {
+  background-color: var(--mainColor);
+  color: var(--textColor);
+}
+
+.cancel-task-button {
+  background-color: #ccc;
+  color: #333;
+}
+
+.completed-task {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.priority-high {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.priority-normal {
+  color: #3498db;
+}
+
+.priority-low {
+  color: #27ae60;
+}
